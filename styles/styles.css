@@ -4,7 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  
+
 }
 
 /* Dark Theme */
@@ -31,15 +31,17 @@ body {
 }
 
 .sidebar .profile img {
-  width: 150px;
-  height: 150px;
+    width: 150px;
+    height: 150px;
   border-radius: 50%;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  padding: 0;
+  
 }
 
 .sidebar h2 {
-  font-size: 20px;
-  margin-bottom: 20px;
+  font-size: 25px;
+  margin-bottom: 10px;
 }
 
 .sidebar nav ul {
@@ -50,9 +52,10 @@ body {
 
 .sidebar nav ul li {
   width: 100%;
-  margin: 10px 0;
+  padding-right: 80px;
   text-align: left;
   padding-left: 0;
+  margin-bottom: 10px;
 }
 
 .sidebar nav ul li a {
@@ -73,9 +76,9 @@ body {
 
 /* Social Media Icons */
 .sidebar .socials {
-  margin-top: auto;
   display: flex;
   gap: 15px;
+  margin-bottom: 10px;
 }
 
 .sidebar .socials a {
@@ -94,21 +97,27 @@ body {
 .content {
     flex-grow: 1; /* Allows content to expand */
     margin-left: 250px; /* Prevent overlap with sidebar */
-    padding: 40px;
-    width: calc(100% - 250px);
+    width: calc(100% - 250px); /* Ensure it fills remaining space */
     display: flex;
-    flex-direction: column; /* Ensure stacking of elements */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0; /* Remove padding to avoid shrinking */
+    overflow: hidden; /* Prevent extra space */
 }
+
 
 /* Hero Section */
 .hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full height of the screen */
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 50px 20px;
+    color: white;
+    overflow: hidden;
 }
 
 .hero h2 {
@@ -186,14 +195,15 @@ main {
 .hero img {
     width: 150px;
     height: 150px;
-    border-radius: 50%;
+    border-radius: 0; /* Remove the circular effect */
     margin-bottom: 20px;
 }
 
 .hero-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    padding: 20px;
 }
 .Socials {
     margin-top: 20px;
@@ -211,4 +221,232 @@ main {
 
 .Socials a:hover {
   color: #00aced; /* Change color on hover */
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Profile Image */
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Overlay Effect */
+.hero-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark transparent effect */
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: rgb(0, 86, 179);
+}
+
+/* About Section */
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px;
+    background: #1a1a1a;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    text-align: left;
+}
+
+/* Profile Image */
+.about-section img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Project Cards */
+.about-projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.project {
+    flex: 1;
+    min-width: 250px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project i {
+    font-size: 28px;
+    color:rgb(0, 86, 179);
+    margin-bottom: 10px;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 15px rgb(0, 86, 179);
+}
+
+/* Client Testimonials */
+.testimonials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.testimonial {
+    flex: 1;
+    min-width: 250px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-style: italic;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial h4 {
+    font-size: 16px;
+    margin-top: 10px;
+    color: rgb(0, 86, 179);
+}
+
+.testimonial:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 5px 15px rgb(0, 86, 179);
+}
+
+/* Smooth Animations */
+.animate {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Resume Section */
+.resume-section {
+    max-width: 100%;
+    margin: auto;
+    padding: 30px;
+    background: #1a1a1a;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+/* Smooth Fade-In Animations */
+.animate {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Headings */
+.resume-section h2 {
+    font-size: 24px;
+    color: rgb(251, 251, 252);
+    margin-bottom: 15px;
+    border-bottom: 2px solid rgb(0, 86, 179);
+    padding-bottom: 5px;
+}
+
+/* Skills Section */
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Skill Progress Bars */
+.skill p {
+    margin-bottom: 5px;
+    color: white;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress {
+    height: 100%;
+    background: rgb(37, 122, 212);
+    width: 0; /* Start at 0 for animation */
+    transition: width 1.5s ease-in-out;
+}
+
+/* Job Experience */
+.job {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+/* Download Button */
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    margin-top: 15px;
+    text-decoration: none;
+    color: white;
+    background: rgb(0, 86, 179);
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: rgb(0, 86, 179);
+}
+
+/* Icons */
+.btn i {
+    margin-right: 5px;
 }
