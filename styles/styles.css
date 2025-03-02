@@ -135,7 +135,7 @@ body {
 .hero .btn {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: rgb(163, 92, 251);
   color: white;
   text-decoration: none;
   font-size: 18px;
@@ -144,7 +144,7 @@ body {
 }
 
 .hero .btn:hover {
-  background-color: #0056b3;
+  background-color: rgb(105, 52, 171);
 }
 
 /* Footer */
@@ -220,7 +220,7 @@ main {
 }
 
 .Socials a:hover {
-  color: #00aced; /* Change color on hover */
+  color: rgb(105, 52, 171);; /* Change color on hover */
 }
 
 .hero-image {
@@ -253,7 +253,7 @@ main {
     display: inline-block;
     margin-top: 15px;
     padding: 10px 20px;
-    background: #007bff;
+    background: rgb(163, 92, 251);;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -261,7 +261,7 @@ main {
 }
 
 .btn:hover {
-    background: rgb(0, 86, 179);
+    background: rgb(105, 52, 171);
 }
 
 /* About Section */
@@ -308,13 +308,13 @@ main {
 
 .project i {
     font-size: 28px;
-    color:rgb(0, 86, 179);
+    color:rgb(163, 92, 251);
     margin-bottom: 10px;
 }
 
 .project:hover {
     transform: translateY(-5px);
-    box-shadow: 0px 5px 15px rgb(0, 86, 179);
+    box-shadow: 0px 5px 15px rgb(163, 92, 251);
 }
 
 /* Client Testimonials */
@@ -340,12 +340,12 @@ main {
 .testimonial h4 {
     font-size: 16px;
     margin-top: 10px;
-    color: rgb(0, 86, 179);
+    color: rgb(163, 92, 251);
 }
 
 .testimonial:hover {
     transform: scale(1.05);
-    box-shadow: 0px 5px 15px rgb(0, 86, 179);
+    box-shadow: 0px 5px 15px rgb(163, 92, 251);
 }
 
 /* Smooth Animations */
@@ -387,7 +387,7 @@ main {
     font-size: 24px;
     color: rgb(251, 251, 252);
     margin-bottom: 15px;
-    border-bottom: 2px solid rgb(0, 86, 179);
+    border-bottom: 2px solid rgb(163, 92, 251);
     padding-bottom: 5px;
 }
 
@@ -415,7 +415,7 @@ main {
 
 .progress {
     height: 100%;
-    background: rgb(37, 122, 212);
+    background:rgb(163, 92, 251);
     width: 0; /* Start at 0 for animation */
     transition: width 1.5s ease-in-out;
 }
@@ -436,17 +436,136 @@ main {
     margin-top: 15px;
     text-decoration: none;
     color: white;
-    background: rgb(0, 86, 179);
+    background: rgb(163, 92, 251);
     border-radius: 5px;
     font-size: 16px;
     transition: background 0.3s ease-in-out;
 }
 
 .btn:hover {
-    background: rgb(0, 86, 179);
+    background:rgb(105, 52, 171);
 }
 
 /* Icons */
 .btn i {
     margin-right: 5px;
+}
+
+/* Portfolio Section */
+.portfolio-section {
+    text-align: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px;
+}
+
+/* Portfolio Title */
+.portfolio-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: rgb(163, 92, 251);
+}
+
+/* Filter Buttons */
+.filter-buttons {
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background: rgb(163, 92, 251);
+}
+
+/* Project Grid Layout */
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Project Card Styling */
+.project {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Project Image */
+.project img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Project Hover Effects */
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 15px rgba(163, 92, 251, 0.3);
+}
+
+.project:hover img {
+    transform: scale(1.05);
+}
+
+/* Project Titles */
+.project h3 {
+    font-size: 20px;
+    color: white;
+    margin-top: 15px;
+}
+
+/* Project Description */
+.project p {
+    font-size: 14px;
+    color: #cccccc;
+    margin-bottom: 10px;
+}
+
+/* Tech Tags */
+.project-tags {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.project-tags span {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    color: #ffffff;
+}
+
+/* View Project Button */
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    margin-top: 10px;
+    text-decoration: none;
+    color: white;
+    background: rgb(163, 92, 251);
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: rgb(120, 50, 220);
 }
