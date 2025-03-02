@@ -11,36 +11,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   </head>
   <body>
-    <header>
-      <div class="container">
-        <h1>Esther</h1>
-        <nav>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="resume.html">Resume</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
-        <div class="Socials">
-            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-        </div>        
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="profile">
+        <img src="./images/profile-pic.jpg" alt="Esther Mutua">
+        <h2>Esther Mutua</h2>
       </div>
-    </header>
-    
-    <main>
-        <section class="hero">
-            <img src="./images/profile-pic.jpg" alt="Esther Mutua - Fullstack Developer">
-            <div class="hero-text">
-                <h2>Esther Mutua</h2>
-                <p>I'm a fullstack software developer with a passion for creating innovative solutions.</p>
-                <a href="about.html" class="btn">About Me</a>
-            </div>
-        </section>
+      <div class="socials">
+        <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
+          <li><a href="resume.html"><i class="fas fa-file"></i> Resume</a></li>
+          <li><a href="portfolio.html"><i class="fas fa-briefcase"></i> Portfolio</a></li>
+          <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+      <section class="hero">
+        <div class="hero-text">
+          <h2>Esther Mutua</h2>
+          <p>I'm a fullstack software developer with a passion for creating innovative solutions.</p>
+          <a href="about.html" class="btn">About Me</a>
+        </div>
+      </section>
     </main>
-    
+
     <footer>
       <p>&copy; 2024 Esther Mutua. All Rights Reserved.</p>
     </footer>
