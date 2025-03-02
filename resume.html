@@ -137,32 +137,6 @@
       <p>&copy; 2024 Esther Mutua. All Rights Reserved.</p>
     </footer>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const animatedElements = document.querySelectorAll(".animate");
-        const progressBars = document.querySelectorAll(".progress");
-
-        function checkVisibility() {
-          animatedElements.forEach((el) => {
-            const position = el.getBoundingClientRect().top;
-            const windowHeight = window.innerHeight;
-            if (position < windowHeight * 0.85) {
-              el.classList.add("visible");
-            }
-          });
-
-          progressBars.forEach((bar) => {
-            const position = bar.getBoundingClientRect().top;
-            const windowHeight = window.innerHeight;
-            if (position < windowHeight * 0.85) {
-              bar.style.width = bar.getAttribute("style").split(":")[1]; // Trigger width animation
-            }
-          });
-        }
-
-        window.addEventListener("scroll", checkVisibility);
-        checkVisibility(); // Run once on load
-      });
-    </script>
+    <script src="scripts/index.js"></script>
   </body>
 </html>
