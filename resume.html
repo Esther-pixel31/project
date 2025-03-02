@@ -1,79 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Resume - Esther Mutua</title>
-    <link rel="stylesheet" href="styles/styles.css">
-    <script src="https://kit.fontawesome.com/YOUR-KIT-ID.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <header>
-        <h1>Resume</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="resume.html" class="active">Resume</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="profile">
+        <img src="./images/profile-pic.jpg" alt="Esther Mutua" />
+        <h2>Esther Mutua</h2>
+      </div>
+      <div class="socials">
+        <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+          </li>
+          <li>
+            <a href="about.html"><i class="fas fa-user"></i> About</a>
+          </li>
+          <li>
+            <a href="resume.html"><i class="fas fa-file"></i> Resume</a>
+          </li>
+          <li>
+            <a href="portfolio.html"
+              ><i class="fas fa-briefcase"></i> Portfolio</a
+            >
+          </li>
+          <li>
+            <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
 
     <main>
-        <section class="resume-section">
-            <h2>Personal Profile</h2>
-            <p>Junior Front-End Developer / System Administrator with over 2 years of experience. Skilled in IT support, website management, and front-end development. Experienced in working with AI integration, UI/UX design, and database management.</p>
+      <section class="resume-section animate">
+        <h2>Personal Profile</h2>
+        <p>
+          IT Officer/ Software Developer, with over 3 years experience
+          acquired in the digital consultancy and education sector, where I have
+          provided end user support to 100-150 users. In addition, I have
+          handled Navision malfunction resolution and functionality training for
+          users. My strengths lie in providing IT support, website management
+          and front end development. In addition, I have working knowledge of
+          RDBMS database management, Adobe Creative Suite, and can actively
+          support IT end to end IT project management.
+        </p>
+        <br />
 
-            <h2>Education</h2>
-            <ul>
-                <li>Bachelor’s Degree in IT - KCA University</li>
-                <li>Diploma in IT - KCA University</li>
-                <li>SheCodes Foundation - Web Developer</li>
-            </ul>
+        <h2>Education</h2>
+        <ul class="resume-list animate">
+          <li><strong>Bachelor’s Degree in IT</strong> - KCA University</li>
+          <li><strong>Diploma in IT</strong> - KCA University</li>
+          <li><strong>SheCodes Foundation</strong> - Web Developer</li>
+        </ul>
+        <br />
 
-            <h2>Technical Skills</h2>
-            <ul>
-                <li>AI Integration - Adding AI features to user interfaces</li>
-                <li>Front-End Development - HTML, CSS, JavaScript, React, PHP, MySQL</li>
-                <li>UI/UX Design - Responsive web design</li>
-                <li>WordPress Development - Custom theme & plugin development</li>
-            </ul>
-
-            <h2>Work Experience</h2>
-            <div class="job">
-                <h3>IT Consultant - Valtra Ventures</h3>
-                <p>May 2024 - Present</p>
-                <ul>
-                    <li>Designed and currently maintaining Valtra Ventures' website.</li>
-                    <li>Managing 2 client accounts for IT support and troubleshooting.</li>
-                </ul>
+        <h2>Technical Skills</h2>
+        <div class="skills-container animate">
+          <div class="skill">
+            <p>HTML & CSS</p>
+            <div class="progress-bar">
+              <div class="progress" style="width: 95%"></div>
             </div>
-
-            <div class="job">
-                <h3>Front-End Developer - Kenya School of Government</h3>
-                <p>Jan 2024 - Apr 2024</p>
-                <ul>
-                    <li>Managed IT infrastructure and provided software support.</li>
-                    <li>Resolved web-based application issues for 70+ users.</li>
-                </ul>
+          </div>
+          <div class="skill">
+            <p>JavaScript</p>
+            <div class="progress-bar">
+              <div class="progress" style="width: 85%"></div>
             </div>
-
-            <div class="job">
-                <h3>Website Developer (Intern) - KCA University</h3>
-                <p>Jun 2023</p>
-                <ul>
-                    <li>Supported senior developers in fixing website issues.</li>
-                    <li>Integrated data from various backend services.</li>
-                </ul>
+          </div>
+          <div class="skill">
+            <p>React & Node.js</p>
+            <div class="progress-bar">
+              <div class="progress" style="width: 80%"></div>
             </div>
+          </div>
+          <div class="skill">
+            <p>Python & Django</p>
+            <div class="progress-bar">
+              <div class="progress" style="width: 75%"></div>
+            </div>
+          </div>
+        </div>
+        <br />
 
-            <h2>Download CV</h2>
-            <a href="CV.pdf" download class="btn"><i class="fas fa-download"></i> Download My CV</a>
-        </section>
+        <h2>Work Experience</h2>
+        <div class="job animate">
+          <h3>IT Consultant - Valtra Ventures</h3>
+          <p class="date">May 2024 - Present</p>
+          <ul>
+            <li>
+              Designed and currently maintaining Valtra Ventures' website.
+            </li>
+            <li>
+              Managing **2 client accounts** for IT support & troubleshooting.
+            </li>
+          </ul>
+        </div>
+
+        <div class="job animate">
+          <h3>Front-End Developer - Kenya School of Government</h3>
+          <p class="date">Jan 2024 - Apr 2024</p>
+          <ul>
+            <li>Managed IT infrastructure & provided software support.</li>
+            <li>Resolved web-based application issues for **70+ users**.</li>
+          </ul>
+        </div>
+
+        <a href="CV.pdf" download class="btn animate"
+          ><i class="fas fa-download"></i> Download My CV</a
+        >
+      </section>
     </main>
 
     <footer>All Rights Reserved</footer>
-</body>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const animatedElements = document.querySelectorAll(".animate");
+        const progressBars = document.querySelectorAll(".progress");
+
+        function checkVisibility() {
+          animatedElements.forEach((el) => {
+            const position = el.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            if (position < windowHeight * 0.85) {
+              el.classList.add("visible");
+            }
+          });
+
+          progressBars.forEach((bar) => {
+            const position = bar.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            if (position < windowHeight * 0.85) {
+              bar.style.width = bar.getAttribute("style").split(":")[1]; // Trigger width animation
+            }
+          });
+        }
+
+        window.addEventListener("scroll", checkVisibility);
+        checkVisibility(); // Run once on load
+      });
+    </script>
+  </body>
 </html>
