@@ -5,46 +5,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Esther Mutua</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
 </head>
 <body>
-    <header>
-        <h1>Portfolio</h1>
+    <aside class="sidebar">
+        <div class="profile">
+          <img src="./images/profile-pic.jpg" alt="Esther Mutua" />
+          <h2>Esther Mutua</h2>
+        </div>
+        <div class="socials">
+          <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="portfolio.html" class="active">Portfolio</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+          <ul>
+            <li>
+              <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            </li>
+            <li>
+              <a href="about.html"><i class="fas fa-user"></i> About</a>
+            </li>
+            <li>
+              <a href="resume.html"><i class="fas fa-file"></i> Resume</a>
+            </li>
+            <li>
+              <a href="portfolio.html"
+                ><i class="fas fa-briefcase"></i> Portfolio</a
+              >
+            </li>
+            <li>
+              <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+            </li>
+          </ul>
         </nav>
-    </header>
-
-    <main>
+      </aside>
+      <main>
         <section class="portfolio-section">
             <h2>My Projects</h2>
+    
+            <!-- Project Filters -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="web">Web Development</button>
+                <button class="filter-btn" data-category="ecommerce">E-commerce</button>
+            </div>
+    
+            <!-- Projects Grid -->
             <div class="project-container">
                 
                 <!-- House Rental System -->
-                <div class="project">
-                    <img src="images/house-rental.jpg" alt="House Rental System">
+                <div class="project" data-category="web">
+                    <i class="fas fa-home"></i>
                     <h3>House Rental System</h3>
-                    <p>A web-based platform that allows landlords to manage property listings and tenants to book rentals. Built with PHP, MySQL, and JavaScript.</p>
-                    <a href="#" class="btn">View Project</a>
+                    <br>
+                    <p>A web-based platform that allows landlords to manage property listings and tenants to book rentals.</p>
+                    <div class="project-tags">
+                        <span>PHP</span> <span>MySQL</span> <span>JavaScript</span>
+                    </div>
+                    <a href="https://github.com/Esther-pixel31/Prop" class="btn">View Project</a>
                 </div>
-
+    
                 <!-- E-commerce Website for PM.co.ke -->
-                <div class="project">
-                    <img src="images/pm-ecommerce.jpg" alt="PM.co.ke E-commerce Website">
-                    <h3>E-commerce Website for PM.co.ke</h3>
-                    <p>An online store developed for PM.co.ke with secure payment integration, user-friendly UI, and an admin dashboard for order management.</p>
-                    <a href="#" class="btn">View Project</a>
+                <div class="project" data-category="ecommerce">
+                    <i class="fas fa-shopping-cart"></i>
+                    <h3> E-commerce Website for PM.co.ke</h3>
+                    <br>
+                    <p>Developed a secure, user-friendly online store with an admin dashboard for easy order management.</p>
+                    <div class="project-tags">
+                        <span>React</span> <span>Node.js</span> <span>Stripe Payments</span>
+                    </div>
+                    <a href="https://pm.co.ke/" class="btn">View Project</a>
                 </div>
-
+    
             </div>
         </section>
     </main>
-
+  
     <footer>All Rights Reserved</footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const filterButtons = document.querySelectorAll(".filter-btn");
+            const projects = document.querySelectorAll(".project");
+    
+            filterButtons.forEach((btn) => {
+                btn.addEventListener("click", function () {
+                    document.querySelector(".filter-btn.active").classList.remove("active");
+                    this.classList.add("active");
+    
+                    const category = this.getAttribute("data-category");
+    
+                    projects.forEach((project) => {
+                        if (category === "all" || project.getAttribute("data-category") === category) {
+                            project.style.display = "block";
+                        } else {
+                            project.style.display = "none";
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+    
 </body>
 </html>
