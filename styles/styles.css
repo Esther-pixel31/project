@@ -229,6 +229,85 @@ main {
   height: 100%;
 }
 
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .content,
+  footer,
+  main {
+    margin-left: 200px;
+    width: calc(100% - 200px);
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* hide sidebar */
+    width: 250px;
+    height: 100%;
+    transition: left 0.3s ease-in-out;
+    z-index: 1000;
+  }
+
+  .sidebar.active {
+    left: 0; /* show sidebar */
+  }
+
+  .menu-toggle {
+    display: block;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 1100;
+  }
+
+  .content,
+  footer,
+  main {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h2 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-section img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .project-container {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonials {
+    flex-direction: column;
+  }
+}
+
+
 /* Profile Image */
 .hero-image img {
   width: 100%;
@@ -663,4 +742,194 @@ textarea:focus {
   align-items: center;
   justify-content: center;
   gap: 8px;
+}
+
+/* Base styles (desktop-first assumed here) */
+
+/* Responsive tweaks */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 220px; /* slightly smaller for tablets */
+  }
+
+  main {
+    margin-left: 220px;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Sidebar becomes top nav */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    z-index: 1000;
+  }
+
+  .sidebar nav ul {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .profile {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  main {
+    margin: 0; /* no left margin, since sidebar is now on top */
+    padding-top: 5rem; /* push content below fixed nav */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Stack elements neatly */
+  .about-projects {
+    display: grid;
+    grid-template-columns: 1fr; /* one project per row */
+    gap: 1rem;
+  }
+
+  .testimonials {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  body {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    padding: 0 0.5rem;
+  }
+
+  h2, h3, h4 {
+    font-size: clamp(1rem, 5vw, 1.5rem);
+  }
+}
+
+/* Hide hamburger on desktop */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1100;
+  color: #333;
+}
+
+/* Sidebar default (desktop) */
+.sidebar {
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background: #070707;
+    transform: translateX(-100%);
+    z-index: 1000;
+    overflow-y: auto;
+    box-shadow: 2px 0 5px rgba(120, 50, 220);
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+  main {
+    margin: 0;
+    padding: 1rem;
+  }
+}
+
+/* --------------------
+   Hamburger button (hidden on desktop)
+-------------------- */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1100;
+  color: #ffffff;
+}
+
+/* --------------------
+   Mobile Responsiveness
+-------------------- */
+@media (max-width: 768px) {
+  /* Show hamburger */
+  .hamburger {
+    display: block;
+  }
+
+  /* Sidebar defaults hidden (slides off-screen) */
+  .sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    width: 220px; /* slightly narrower for mobile */
+    padding: 15px;
+    align-items: flex-start;
+  }
+
+  /* Sidebar when active (visible) */
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+  /* Adjust profile image for smaller screens */
+  .sidebar .profile img {
+    width: 100px;
+    height: 100px;
+  }
+
+  /* Reduce heading sizes */
+  .sidebar h2 {
+    font-size: 20px;
+  }
+
+  /* Navigation styles */
+  .sidebar nav ul li {
+    padding-right: 0;
+    margin-bottom: 8px;
+  }
+
+  .sidebar nav ul li a {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  /* Main content shifts down to avoid overlay */
+  main {
+    margin: 0;
+    padding: 1rem;
+  }
 }

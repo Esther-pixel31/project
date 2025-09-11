@@ -41,6 +41,19 @@ document.addEventListener("DOMContentLoaded", function () {
     checkVisibility(); // Run once on load
   });
 
+const hamburger = document.querySelector('.hamburger');
+const sidebar = document.querySelector('.sidebar');
+
+hamburger.addEventListener('click', () => {
+  sidebar.classList.toggle('active');
+
+  // Toggle between bars and X
+  const icon = hamburger.querySelector('i');
+  icon.classList.toggle('fa-bars');
+  icon.classList.toggle('fa-times');
+});
+
+
   document.addEventListener("DOMContentLoaded", function () {
     const filterButtons = document.querySelectorAll(".filter-btn");
     const projects = document.querySelectorAll(".project");
