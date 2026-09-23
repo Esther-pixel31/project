@@ -1,98 +1,791 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio - Esther Mutua</title>
-    <link rel="stylesheet" href="styles/styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com" rel="preconnect">
-    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">  </head>
-  <body>
-    <!-- Sidebar Navigation -->
-    <aside class="sidebar">
-      <button class="menu-toggle">
-        <i class="fas fa-bars"></i>
-      </button>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      <div class="profile">
-        <img src="./images/profile-pic.jpg" alt="Esther Mutua">
-        <h2>Esther Mutua</h2>
-      </div>
-      <div class="socials">
-        <a href="https://github.com/Esther-pixel31" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/esther-mutua-77551736a/" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://www.facebook.com/esther.mutua.923" target="_blank"><i class="fab fa-facebook"></i></a>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-          <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
-          <li><a href="resume.html"><i class="fas fa-file"></i> Resume</a></li>
-          <li><a href="portfolio.html"><i class="fas fa-briefcase"></i> Portfolio</a></li>
-          <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
-        </ul>
-      </nav>
-    </aside>
+    <meta
+        name="description"
+        content="Esther Wanza — Full-Stack Developer building modern web applications, APIs and digital products."
+    >
 
-    <div class="hamburger">
-      <i class="fas fa-bars"></i>
+    <title>Esther Wanza | Full-Stack Developer</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+    <header class="site-header">
+
+        <a href="#home" class="brand-logo" aria-label="Esther Wanza home">
+
+    <svg
+        class="brand-mark"
+        viewBox="0 0 70 70"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+    >
+        <!-- Upper sweep -->
+        <path
+            d="M58 10H27C17 10 10 18 10 29V35C10 22 20 17 31 17H51C55 17 58 14 58 10Z"
+            fill="currentColor"
+        />
+
+        <!-- Lower sweep -->
+        <path
+            d="M10 32V42C10 53 18 60 29 60H59L51 52H31C20 52 10 47 10 32Z"
+            fill="currentColor"
+        />
+
+        <!-- Lime centre -->
+        <path
+            d="M27 30H45C50 30 54 33 57 39H38C33 39 29 36 27 30Z"
+            class="brand-mark-accent"
+        />
+    </svg>
+
+    <div class="brand-text">
+
+        <div class="brand-name">
+            <span>ESTHER</span>
+            <strong>WANZA</strong>
+        </div>
+
+        <div class="brand-tagline">
+            WEB DEVELOPER
+            <span>‹</span>
+            CREATIVE
+            <span>‹</span>
+            PROBLEM SOLVER
+        </div>
+
     </div>
 
-    <aside class="sidebar">
-          <div class="profile">
-            <img src="./images/profile-pic.jpg" alt="Esther Mutua" />
-            <h2>Esther Mutua</h2>
-          </div>
-          <div class="socials">
-            <a href="https://github.com/Esther-pixel31" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/esther-mutua-a0496b1ab/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://www.facebook.com/esther.mutua.923" target="_blank"><i class="fab fa-facebook"></i></a>
-          </div>
-          <nav>
-            <ul>
-              <li>
-                <a href="index.html"><i class="fas fa-home"></i> Home</a>
-              </li>
-              <li>
-                <a href="about.html"><i class="fas fa-user"></i> About</a>
-              </li>
-              <li>
-                <a href="resume.html"><i class="fas fa-file"></i> Resume</a>
-              </li>
-              <li>
-                <a href="portfolio.html"
-                  ><i class="fas fa-briefcase"></i> Portfolio</a
+</a>
+
+        <nav class="desktop-nav" aria-label="Main navigation">
+            <a href="#about">About</a>
+            <a href="#work">Work</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <button
+            class="menu-toggle"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+        >
+            <span></span>
+            <span></span>
+        </button>
+
+    </header>
+
+
+    <main>
+
+        <!-- =========================
+             HERO
+        ========================== -->
+        <section class="hero" id="home">
+
+    <div class="hero-background"></div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <div class="hero-copy">
+
+            <div class="hero-eyebrow">
+                <span class="status-dot"></span>
+                <span>AVAILABLE FOR SELECTED PROJECTS</span>
+            </div>
+
+            <h1 class="hero-title">
+                <span class="hero-title-white">
+                    FULL-STACK
+                </span>
+
+                <span class="hero-title-accent">
+                    DEVELOPER.
+                </span>
+            </h1>
+
+            <p class="hero-intro">
+                I design and build modern web and mobile applications,
+                APIs and scalable backend systems that solve
+                real-world problems.
+            </p>
+
+            <div class="hero-actions">
+
+                <a href="#work" class="hero-btn hero-btn-primary">
+                    <span>View My Work</span>
+                    <span class="hero-arrow">→</span>
+                </a>
+
+                <a href="#contact" class="hero-btn hero-btn-outline">
+                    Contact Me
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-meta">
+
+        <div class="hero-meta-item">
+            <span class="meta-label">BASED IN</span>
+            <strong>NAIROBI, KENYA</strong>
+        </div>
+
+        <div class="hero-meta-item">
+            <span class="meta-label">SPECIALISING IN</span>
+            <strong>MOBILE / WEB / API / SAAS</strong>
+        </div>
+
+        <div class="hero-meta-item">
+            <span class="meta-label">PASSIONATE ABOUT</span>
+            <strong>BUILDING SOLUTIONS</strong>
+        </div>
+
+        <a href="#work" class="hero-scroll">
+            <span class="scroll-line"></span>
+            <span>SCROLL TO EXPLORE</span>
+            <span class="scroll-arrow">↓</span>
+        </a>
+
+    </div>
+
+</section>
+
+<section class="work-section" id="work">
+
+    <!-- HEADER -->
+    <div class="work-header">
+
+        <div class="work-heading">
+            <span class="work-number">02</span>
+            <span class="work-line"></span>
+            <h2>SELECTED WORK</h2>
+        </div>
+
+        <p class="work-intro">
+            A SELECTION OF PRODUCTS<br>
+            AND SYSTEMS I'VE DESIGNED<br>
+            AND DEVELOPED.
+        </p>
+
+    </div>
+
+
+    <!-- =========================
+         PROJECT 01
+    ========================== -->
+
+    <article class="work-project">
+
+        <div class="work-visual">
+
+            <img
+                src="images/projects/property-management.png"
+                alt="Property Management SaaS"
+            >
+
+            <span class="visual-number">01</span>
+
+            <span class="visual-status status-live">
+                LIVE PROJECT
+            </span>
+
+        </div>
+
+
+        <div class="work-info">
+
+            <p class="work-category">
+                FULL-STACK WEB APPLICATION
+            </p>
+
+            <h3>
+                PROPERTY<br>
+                MANAGEMENT SAAS
+            </h3>
+
+            <p class="work-description">
+                A comprehensive property management platform
+                for managing tenants, leases, payments,
+                utilities, expenses and operational reporting.
+            </p>
+
+            <div class="work-tech">
+                <span>Next.js</span>
+                <span>FastAPI</span>
+                <span>PostgreSQL</span>
+                <span>Docker</span>
+            </div>
+
+            <a
+                href="https://nyumbanihomes.co.ke"
+                class="work-link"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                VIEW LIVE PROJECT
+                <span>↗</span>
+            </a>
+
+        </div>
+
+    </article>
+
+
+    <!-- =========================
+         PROJECT 02
+    ========================== -->
+
+    <article class="work-project">
+
+        <div class="work-visual water-visual">
+
+            <img
+                src="images/projects/water-app.png"
+                alt="Vanella Water refill and loyalty platform concept"
+            >
+
+            <span class="visual-number">
+                02
+            </span>
+
+            <span class="visual-status status-development">
+                IN DEVELOPMENT
+            </span>
+
+
+
+            <div class="water-phone">
+
+                <div class="water-drop">
+                    ◇
+                </div>
+
+                <span>REFILL</span>
+
+                <strong>
+                    Pure Water.<br>
+                    Rewarded.
+                </strong>
+
+                <p>
+                    Order water.<br>
+                    Earn loyalty points.
+                </p>
+
+                <div class="water-phone-button">
+                    COMING SOON
+                </div>
+
+            </div>
+
+
+            <div class="water-features">
+
+                <div>
+                    <span>01</span>
+                    <strong>Customer<br>Ordering</strong>
+                </div>
+
+                <div>
+                    <span>02</span>
+                    <strong>Loyalty<br>System</strong>
+                </div>
+
+                <div>
+                    <span>03</span>
+                    <strong>M-Pesa<br>Payments</strong>
+                </div>
+
+                <div>
+                    <span>04</span>
+                    <strong>Admin<br>Dashboard</strong>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="work-info">
+
+            <p class="work-category">
+                MOBILE & WEB PLATFORM
+            </p>
+
+            <h3>
+                WATER REFILL<br>
+                & LOYALTY PLATFORM
+            </h3>
+
+            <p class="work-description">
+                A refill ordering and customer loyalty platform
+                designed to connect customer accounts, refill
+                orders, payments, loyalty rewards and
+                administrative reporting.
+            </p>
+
+            <div class="work-tech">
+                <span>Mobile</span>
+                <span>FastAPI</span>
+                <span>SQL</span>
+                <span>M-Pesa</span>
+            </div>
+
+            <div class="development-label">
+                <span></span>
+                DEVELOPMENT IN PROGRESS
+            </div>
+
+        </div>
+
+    </article>
+
+
+    <!-- =========================
+         PROJECT 03
+    ========================== -->
+
+    <article class="work-project">
+
+        <div class="work-visual ecommerce-visual">
+
+            <img
+                src="images/projects/ecommerce.png"
+                alt="Ecommerce platform concept"
+            >
+
+            <span class="visual-number">03</span>
+
+            <span class="visual-status status-archived">
+                ARCHIVED
+            </span>
+
+        </div>
+
+
+        <div class="work-info">
+
+            <p class="work-category">
+                E-COMMERCE APPLICATION
+            </p>
+
+            <h3>
+                ECOMMERCE<br>
+                PLATFORM
+            </h3>
+
+            <p class="work-description">
+                An e-commerce web application built around
+                product discovery, responsive design and a
+                streamlined online shopping experience.
+            </p>
+
+            <div class="work-tech">
+                <span>React</span>
+                <span>JavaScript</span>
+                <span>HTML</span>
+                <span>CSS</span>
+            </div>
+
+            <div class="archive-label">
+                ARCHIVED PROJECT
+                <span>Original deployment no longer active</span>
+            </div>
+
+        </div>
+
+    </article>
+
+</section>
+
+        <!-- =========================
+             ABOUT
+        ========================== -->
+
+    <section class="about-section" id="about">
+
+        <div class="about-header">
+
+            <div class="about-heading">
+                <span class="about-number">03</span>
+                <span class="about-line"></span>
+                <h2>ABOUT ME</h2>
+            </div>
+
+            <p class="about-header-copy">
+                DEVELOPER · CREATIVE<br>
+                PROBLEM SOLVER
+            </p>
+
+        </div>
+
+
+        <div class="about-intro">
+
+            <h3>
+                I DON'T JUST WRITE CODE.
+                <span>I BUILD SOLUTIONS.</span>
+            </h3>
+
+        </div>
+
+
+        <div class="about-grid">
+
+            <!-- PROFILE IMAGE -->
+
+            <div class="about-image">
+
+                <img
+                    src="images/profile-pic.jpg"
+                    alt="Esther Wanza"
                 >
-              </li>
-              <li>
-                <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
-              </li>
-            </ul>
-          </nav>
-        </aside>
+
+                <div class="about-image-label">
+                    <span>ESTHER WANZA</span>
+                    <span>NAIROBI, KENYA</span>
+                </div>
+
+            </div>
 
 
-    <!-- Main Content -->
-    <main class="content">    
-      <section class="hero">
-        <div class="hero-image">
-            <img src="./images/profile-pic.jpg" alt="profile-pic">
+            <!-- ABOUT CONTENT -->
+
+            <div class="about-content">
+
+                <p class="about-lead">
+                    I'm a full-stack developer focused on turning
+                    real-world problems into practical digital
+                    products.
+                </p>
+
+                <p>
+                    My work spans web and mobile applications,
+                    backend APIs, databases, system integrations and
+                    deployment. I work across the full development
+                    lifecycle — from understanding the problem and
+                    designing the user experience to building,
+                    integrating and deploying the final product.
+                </p>
+
+                <p>
+                    I approach development with a simple objective:
+                    technology should solve a problem, improve a
+                    process or create measurable value.
+                </p>
+
+
+                <div class="about-details">
+
+                    <div class="about-detail">
+                        <span>01</span>
+
+                        <div>
+                            <small>FOCUS</small>
+                            <strong>
+                                MOBILE & WEB<br>
+                                DEVELOPMENT
+                            </strong>
+                        </div>
+                    </div>
+
+
+                    <div class="about-detail">
+                        <span>02</span>
+
+                        <div>
+                            <small>BASED IN</small>
+                            <strong>
+                                NAIROBI<br>
+                                KENYA
+                            </strong>
+                        </div>
+                    </div>
+
+
+                    <div class="about-detail">
+                        <span>03</span>
+
+                        <div>
+                            <small>INTEREST</small>
+                            <strong>
+                                DIGITAL<br>
+                                PRODUCTS
+                            </strong>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <a
+                    href="document/DownloadCV.pdf"
+                    class="about-cv"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <span>VIEW MY RESUME</span>
+                    <span class="about-cv-arrow">↗</span>
+                </a>
+
+            </div>
+
         </div>
-        <div class="hero-text">
-          <h2>Esther Mutua</h2>
-          <p>I'm a fullstack software developer with a passion for creating innovative solutions.</p>
-          <a href="about.html" class="btn">About Me</a>
+
+    </section>
+
+        <!-- ======================================================
+     SECTION 04 — SKILLS & TECHNOLOGIES
+======================================================= -->
+
+<section class="skills-section" id="skills">
+
+    <div class="skills-header">
+
+        <div class="skills-heading">
+            <span class="skills-number">04</span>
+            <span class="skills-line"></span>
+            <h2>SKILLS & TECHNOLOGIES</h2>
         </div>
-      </section>
+
+        <p class="skills-header-copy">
+            THE TOOLS AND TECHNOLOGIES<br>
+            I USE TO TURN IDEAS<br>
+            INTO WORKING PRODUCTS.
+        </p>
+
+    </div>
+
+
+    <div class="skills-intro">
+
+        <p class="skills-eyebrow">
+            MY TOOLKIT
+        </p>
+
+        <h3>
+            FROM INTERFACE<br>
+            TO <span>INFRASTRUCTURE.</span>
+        </h3>
+
+        <p class="skills-description">
+            I work across web, mobile, backend and deployment,
+            choosing technologies based on the problem being
+            solved rather than being tied to a single stack.
+        </p>
+
+    </div>
+
+
+    <div class="skills-list">
+
+        <!-- FRONTEND -->
+        <div class="skill-row">
+
+            <span class="skill-index">01</span>
+
+            <h4>FRONTEND</h4>
+
+            <div class="skill-items">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+                <span>React</span>
+                <span>Next.js</span>
+                <span>Responsive UI</span>
+            </div>
+
+            <span class="skill-symbol">↗</span>
+
+        </div>
+
+
+        <!-- MOBILE -->
+        <div class="skill-row">
+
+            <span class="skill-index">02</span>
+
+            <h4>MOBILE</h4>
+
+            <div class="skill-items">
+                <span>React Native</span>
+                <span>TypeScript</span>
+                <span>Expo</span>
+                <span>REST API Integration</span>
+            </div>
+
+            <span class="skill-symbol">↗</span>
+
+        </div>
+
+
+        <!-- BACKEND -->
+        <div class="skill-row">
+
+            <span class="skill-index">03</span>
+
+            <h4>BACKEND</h4>
+
+            <div class="skill-items">
+                <span>Python</span>
+                <span>FastAPI</span>
+                <span>Flask</span>
+                <span>REST APIs</span>
+                <span>Authentication</span>
+            </div>
+
+            <span class="skill-symbol">↗</span>
+
+        </div>
+
+
+        <!-- DATA -->
+        <div class="skill-row">
+
+            <span class="skill-index">04</span>
+
+            <h4>DATA</h4>
+
+            <div class="skill-items">
+                <span>SQL</span>
+                <span>PostgreSQL</span>
+                <span>Database Design</span>
+                <span>Data Modelling</span>
+            </div>
+
+            <span class="skill-symbol">↗</span>
+
+        </div>
+
+
+        <!-- DEVOPS -->
+        <div class="skill-row">
+
+            <span class="skill-index">05</span>
+
+            <h4>DEVOPS & TOOLS</h4>
+
+            <div class="skill-items">
+                <span>Docker</span>
+                <span>Git</span>
+                <span>GitHub</span>
+                <span>Linux</span>
+                <span>VPS Deployment</span>
+            </div>
+
+            <span class="skill-symbol">↗</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+        <!-- =========================
+             CONTACT
+        ========================== -->
+        <section class="contact-section" id="contact">
+
+            <p class="contact-label">
+                HAVE A PROJECT IN MIND?
+            </p>
+
+            <h2>
+                LET'S BUILD<br>
+                SOMETHING<br>
+                <span>GREAT.</span>
+            </h2>
+
+            <div class="contact-bottom">
+
+                <p>
+                    Have an idea, project or opportunity?<br>
+                    Let's talk about it.
+                </p>
+
+                <!-- Replace with your actual email -->
+                <a
+                    href="mailto:your-email@example.com"
+                    class="contact-button"
+                >
+                    Get in touch
+                    <span>↗</span>
+                </a>
+
+            </div>
+
+        </section>
+
     </main>
 
-    <footer>
-      <p>&copy; 2025 Esther Mutua. All Rights Reserved.</p>
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer class="site-footer">
+
+        <div>
+            <strong>ESTHER WANZA</strong>
+            <span>FULL-STACK DEVELOPER</span>
+        </div>
+
+        <div class="footer-links">
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                GitHub ↗
+            </a>
+
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                LinkedIn ↗
+            </a>
+        </div>
+
+        <p>
+            © <span id="current-year"></span>
+        </p>
+
     </footer>
+
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-menu">
+
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+
+    </div>
+
 
     <script src="scripts/index.js"></script>
 
-  </body>
+</body>
 </html>

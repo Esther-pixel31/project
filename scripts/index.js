@@ -1,82 +1,38 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const animatedElements = document.querySelectorAll(".animate");
-  const progressBars = document.querySelectorAll(".progress");
+const menuButton = document.querySelector(".menu-toggle");
+const mobileMenu = document.querySelector(".mobile-menu");
+const mobileLinks = document.querySelectorAll(".mobile-menu a");
+const year = document.querySelector("#current-year");
 
-  function checkVisibility() {
-    animatedElements.forEach((el) => {
-      const position = el.getBoundingClientRect().top;
-      const windowHeight = window.innerHeight;
-      if (position < windowHeight * 0.85) {
-        el.classList.add("visible");
-      }
+if (year) {
+    year.textContent = new Date().getFullYear();
+}
+
+if (menuButton && mobileMenu) {
+
+    menuButton.addEventListener("click", () => {
+
+        const isOpen = mobileMenu.classList.toggle("active");
+
+        document.body.classList.toggle("menu-open", isOpen);
+
+        menuButton.setAttribute(
+            "aria-expanded",
+            isOpen ? "true" : "false"
+        );
     });
 
-    progressBars.forEach((bar) => {
-      const position = bar.getBoundingClientRect().top;
-      const windowHeight = window.innerHeight;
-      if (position < windowHeight * 0.85) {
-        bar.style.width = bar.getAttribute("style").split(":")[1]; // Trigger width animation
-      }
-    });
-  }
+    mobileLinks.forEach((link) => {
 
-  window.addEventListener("scroll", checkVisibility);
-  checkVisibility(); // Run once on load
-});
+        link.addEventListener("click", () => {
 
-document.addEventListener("DOMContentLoaded", function () {
-    const animatedElements = document.querySelectorAll(".animate");
+            mobileMenu.classList.remove("active");
+            document.body.classList.remove("menu-open");
 
-    function checkVisibility() {
-      animatedElements.forEach((el) => {
-        const position = el.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-        if (position < windowHeight * 0.85) {
-          el.classList.add("visible");
-        }
-      });
-    }
-
-    window.addEventListener("scroll", checkVisibility);
-    checkVisibility(); // Run once on load
-  });
-
-const hamburger = document.querySelector('.hamburger');
-const sidebar = document.querySelector('.sidebar');
-
-hamburger.addEventListener('click', () => {
-  sidebar.classList.toggle('active');
-
-  // Toggle between bars and X
-  const icon = hamburger.querySelector('i');
-  icon.classList.toggle('fa-bars');
-  icon.classList.toggle('fa-times');
-});
-
-
-  document.addEventListener("DOMContentLoaded", function () {
-    const filterButtons = document.querySelectorAll(".filter-btn");
-    const projects = document.querySelectorAll(".project");
-
-    filterButtons.forEach((btn) => {
-      btn.addEventListener("click", function () {
-        document
-          .querySelector(".filter-btn.active")
-          .classList.remove("active");
-        this.classList.add("active");
-
-        const category = this.getAttribute("data-category");
-
-        projects.forEach((project) => {
-          if (
-            category === "all" ||
-            project.getAttribute("data-category") === category
-          ) {
-            project.style.display = "block";
-          } else {
-            project.style.display = "none";
-          }
+            menuButton.setAttribute(
+                "aria-expanded",
+                "false"
+            );
         });
-      });
+
     });
-  });
+}
